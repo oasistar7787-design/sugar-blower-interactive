@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import "@free-fonts/lxgw-wenkai-gb";
 import "./globals.css";
 
 export const dynamic = "force-static";
