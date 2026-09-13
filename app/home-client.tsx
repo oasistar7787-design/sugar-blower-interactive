@@ -10,7 +10,7 @@ const assetPrefix = process.env.NEXT_PUBLIC_BASE_PATH || "";
 const media = (path: string) => `${assetPrefix}/media/${path}`;
 
 const stories = [
-  { id: "guide" as const, number: "壹", title: "交互说明", en: "INTERACTION GUIDE", sugar: media("sugar-star-long-v4.png"), className: "sugar-star" },
+  { id: "guide" as const, number: "壹", title: "交互说明", en: "INTERACTION GUIDE", sugar: media("sugar-star-long-v3.png"), className: "sugar-star" },
   { id: "presentation" as const, number: "贰", title: "项目宣讲", en: "PROJECT FILM", sugar: media("sugar-fish-long-v2.png"), className: "sugar-fish" },
   { id: "experience" as const, number: "叁", title: "体验过程", en: "EXPERIENCE", sugar: media("sugar-gourd-long-v2.png"), className: "sugar-gourd" },
 ];
@@ -82,7 +82,12 @@ export default function HomeClient() {
                 aria-label={`拿起${story.title}糖人`}
               >
                 <img src={story.sugar} alt="" draggable={false} />
-                <span className="sugar-label"><small>{story.number}</small><span>{story.title}</span></span>
+                <span className="sugar-label">
+                  <small>{story.number}</small>
+                  <span className="sugar-label-title" aria-hidden="true">
+                    {[...story.title].map((character, index) => <span key={`${character}-${index}`}>{character}</span>)}
+                  </span>
+                </span>
               </button>
             ))}
           </div>

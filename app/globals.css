@@ -42,7 +42,8 @@ button { -webkit-tap-highlight-color:transparent; }
 .sugar-gourd img { top:1.5%; }
 .sugar-label { position:absolute; z-index:4; top:-2%; left:50%; display:flex; flex-direction:column; align-items:center; gap:5px; min-width:0; padding:9px 8px 10px; border:1px solid rgba(151,101,48,.32); border-radius:18px; color:#4f3929; background:rgba(251,248,241,.92); box-shadow:0 5px 16px rgba(61,39,22,.08); backdrop-filter:blur(5px); font-size:clamp(.72rem,3vw,.9rem); line-height:1.08; white-space:nowrap; transform:translate(-50%,-100%); }
 .sugar-label small { color:var(--cinnabar); font-size:.58rem; line-height:1; }
-.sugar-label > span { display:flex; align-items:center; justify-content:center; line-height:1; letter-spacing:.14em; writing-mode:vertical-rl; text-orientation:upright; }
+.sugar-label-title { display:flex; width:1em; flex-direction:column; align-items:center; justify-content:center; gap:.12em; line-height:1; }
+.sugar-label-title > span { display:block; width:1em; height:1em; text-align:center; line-height:1; }
 .sugar-rack-back,.sugar-rack-front { position:absolute; left:34%; width:62%; height:auto; user-select:none; pointer-events:none; }
 .sugar-rack-back { z-index:5; top:69%; }
 .sugar-rack-front { z-index:7; top:69.53%; filter:drop-shadow(0 9px 9px rgba(55,31,16,.14)); }
@@ -67,6 +68,6 @@ button { -webkit-tap-highlight-color:transparent; }
 
 @keyframes fade-in { from { opacity:0; } }
 @keyframes rise-in { from { opacity:0; transform:translateY(34px); } }
-@media (max-width:560px) { .sugar-label { top:2%; } }
+@media (max-width:560px) { .sugar-label { top:7%; } }
 @media (min-width:700px) { .modal-backdrop { place-items:center; padding:28px; } .story-modal { padding:34px; border-bottom:1px solid rgba(167,116,52,.45); border-radius:22px; } }
 @media (prefers-reduced-motion:reduce) { *,*::before,*::after { scroll-behavior:auto!important; animation-duration:.01ms!important; animation-iteration-count:1!important; transition-duration:.01ms!important; } }
